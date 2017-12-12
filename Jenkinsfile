@@ -6,5 +6,19 @@ pipeline {
         echo 'On stage 1'
       }
     }
+    stage('stage 2') {
+      steps {
+        parallel(
+          "stage 2": {
+            echo 'on stage 2'
+            
+          },
+          "": {
+            build 'build'
+            
+          }
+        )
+      }
+    }
   }
 }
