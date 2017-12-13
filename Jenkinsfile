@@ -8,16 +8,7 @@ pipeline {
     }
     stage('stage 2') {
       steps {
-        parallel(
-          "stage 2": {
-            echo 'on stage 2'
-            
-          },
-          "Build": {
-            build 'build'
-            
-          }
-        )
+        echo 'on stage 2'
       }
     }
   }
