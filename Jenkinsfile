@@ -8,7 +8,16 @@ pipeline {
     }
     stage('stage 2') {
       steps {
-        echo 'on stage 2'
+        parallel(
+          "stage 2": {
+            echo 'on stage 2'
+            
+          },
+          "": {
+            bat 'javac SampleJavaProject.java SampleJavaProject'
+            
+          }
+        )
       }
     }
   }
