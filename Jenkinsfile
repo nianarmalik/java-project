@@ -13,7 +13,7 @@ pipeline {
             echo 'on stage 2'
             
           },
-          "": {
+          "Build": {
             build 'build'
             
           }
