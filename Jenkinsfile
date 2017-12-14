@@ -13,8 +13,8 @@ pipeline {
             echo 'on stage 2'
             
           },
-          "": {
-            bat 'javac SampleJavaProject.java SampleJavaProject'
+          "error": {
+            bat 'echo %PATH%'
             
           }
         )
